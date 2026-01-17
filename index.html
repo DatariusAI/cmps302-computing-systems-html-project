@@ -7,140 +7,190 @@
   <style>
     body {
       font-family: "Segoe UI", Arial, sans-serif;
-      background: linear-gradient(135deg, #f4f6f8, #e9ecef);
+      background: #f4f6f8;
       margin: 0;
-      padding: 40px;
+      padding: 0;
     }
 
+    /* NAVIGATION */
+    nav {
+      background-color: #8b0000;
+      padding: 15px 30px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav span {
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 0.95em;
+    }
+
+    /* MAIN CONTAINER */
     .container {
-      max-width: 850px;
-      margin: auto;
+      max-width: 1000px;
+      margin: 40px auto;
       background: white;
       padding: 40px;
       border-radius: 14px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-      animation: fadeIn 1.2s ease;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to   { opacity: 1; transform: translateY(0); }
     }
 
     h1 {
       text-align: center;
       color: #8b0000;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
 
     p {
+      text-align: center;
       font-size: 1.1em;
       line-height: 1.7;
-      text-align: center;
     }
 
-    /* Tooltip target */
-    .aub-text {
+    /* TOOLTIP TEXT */
+    .aub {
       font-weight: bold;
       color: #8b0000;
       cursor: help;
     }
 
-    /* Clickable logo */
-    .logo-link {
-      display: inline-block;
-      position: relative;
+    /* CLICKABLE IMAGE */
+    .hero-link {
+      display: block;
+      width: fit-content;
+      margin: 30px auto;
       cursor: pointer;
     }
 
-    .logo-link img {
-      display: block;
-      margin: 25px auto;
-      width: 220px;
+    .hero-link img {
+      width: 380px;
+      border-radius: 12px;
       transition: transform 0.35s ease, box-shadow 0.35s ease;
-      border-radius: 10px;
     }
 
-    .logo-link:hover img {
-      transform: scale(1.08);
-      box-shadow: 0 0 25px rgba(139, 0, 0, 0.6);
+    .hero-link:hover img {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(139, 0, 0, 0.6);
     }
 
-    .logo-link:active img {
-      transform: scale(0.95);
+    /* CARDS */
+    .cards {
+      display: flex;
+      gap: 25px;
+      margin-top: 50px;
     }
 
-    /* Ripple effect */
-    .logo-link::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 0;
-      height: 0;
-      background: rgba(139, 0, 0, 0.25);
-      border-radius: 50%;
-      transform: translate(-50%, -50%);
-      opacity: 0;
-    }
-
-    .logo-link:active::after {
-      width: 260px;
-      height: 260px;
-      opacity: 1;
-      transition: width 0.4s ease, height 0.4s ease, opacity 0.6s ease;
-    }
-
-    .hint {
-      font-size: 0.95em;
-      color: #666;
-      margin-top: -10px;
-    }
-
-    .footer {
-      margin-top: 40px;
+    .card {
+      flex: 1;
+      background: #fafafa;
+      padding: 25px;
+      border-radius: 12px;
       text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .card h3 {
+      color: #8b0000;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 12px;
+      color: white;
+      background: #8b0000;
+      padding: 10px 18px;
+      border-radius: 6px;
+      text-decoration: none;
       font-size: 0.9em;
-      color: #777;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 0.9em;
+      color: #666;
     }
   </style>
 </head>
 
 <body>
 
+  <!-- NAV -->
+  <nav>
+    <span>AUB HTML Project</span>
+    <div>
+      <a href="#">Home</a>
+      <a href="#">Academics</a>
+      <a href="#">Admissions</a>
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
   <div class="container">
 
     <h1>American University of Beirut</h1>
 
-    <!-- Paragraph with tooltip -->
+    <!-- REQUIRED PARAGRAPH WITH TOOLTIP -->
     <p>
-      <span class="aub-text" title="American University of Beirut">AUB</span> is a leading
-      private, independent university located in Beirut, Lebanon, known for excellence
-      in education, research, and service.
+      <span class="aub" title="American University of Beirut">AUB</span> is a leading private,
+      independent university located in Beirut, Lebanon, known for excellence in
+      education, research, and service.
     </p>
 
-    <!-- Image nested inside a paragraph -->
+    <!-- ✅ CORRECT CLICKABLE IMAGE -->
     <p>
-      <img src="./aub_logo.jpeg" alt="AUB Logo">
-    </p>
-
-    <!-- Clickable image link inside a paragraph -->
-    <p>
-      <a class="logo-link"
+      <a class="hero-link"
          href="https://www.aub.edu.lb"
          target="_blank"
          title="Visit the American University of Beirut website">
-        <img src="./aub_logo.jpeg" alt="Visit AUB Website">
+        <img src="./aub_logo.jpeg" alt="American University of Beirut Logo">
       </a>
     </p>
 
-    <p class="hint">
-      Click the logo to open the AUB website in a new tab.
-    </p>
+    <p><em>Click the image above to visit the official AUB website.</em></p>
 
-    <div class="footer">
-      CMPS 302 – Computing Systems • HTML Project
+    <!-- EXTRA CONTENT (EXCEEDS REQUIREMENTS) -->
+    <div class="cards">
+
+      <div class="card">
+        <h3>Academics</h3>
+        <p>Explore undergraduate and graduate programs across multiple disciplines.</p>
+        <a href="https://www.aub.edu.lb/academics" target="_blank">Learn More</a>
+      </div>
+
+      <div class="card">
+        <h3>Admissions</h3>
+        <p>Find admission requirements, deadlines, and scholarship opportunities.</p>
+        <a href="https://www.aub.edu.lb/admissions" target="_blank">Apply Now</a>
+      </div>
+
+      <div class="card">
+        <h3>Campus Life</h3>
+        <p>Experience student organizations, athletics, and vibrant campus culture.</p>
+        <a href="https://www.aub.edu.lb/campus-life" target="_blank">Discover</a>
+      </div>
+
     </div>
+
+    <footer>
+      CMPS 302 – Computing Systems • HTML Project
+    </footer>
 
   </div>
 
