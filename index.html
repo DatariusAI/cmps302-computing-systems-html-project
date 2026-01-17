@@ -3,28 +3,89 @@
 <head>
   <meta charset="UTF-8">
   <title>CMPS 302 – AUB HTML Project</title>
+
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 40px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #8b0000;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    img {
+      display: block;
+      margin: 20px auto;
+      transition: transform 0.3s ease;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .footer {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 0.9em;
+      color: #666;
+    }
+  </style>
 </head>
 <body>
 
-  <h1>American University of Beirut</h1>
+  <div class="container">
 
-  <p>
-    <span title="American University of Beirut">AUB</span> is a leading private,
-    independent university located in Beirut, Lebanon, known for excellence in
-    education, research, and service.
-  </p>
+    <h1>American University of Beirut</h1>
 
-  <!-- Image nested inside a paragraph -->
-  <p>
-    <img src="./aub-logo.png" alt="AUB Logo" width="200">
-  </p>
+    <!-- Paragraph with text about AUB and tooltip -->
+    <p>
+      <span title="American University of Beirut">AUB</span> is a leading private,
+      independent university located in Beirut, Lebanon, known for excellence in
+      education, research, and service.
+    </p>
 
-  <!-- Logo used as a clickable link -->
-  <p>
-    <a href="https://www.aub.edu.lb" target="_blank" title="American University of Beirut">
-      <img src="./aub-logo.png" alt="Visit AUB Website" width="200">
-    </a>
-  </p>
+    <!-- Paragraph with image nested inside -->
+    <p>
+      <img src="./aub-logo.png" alt="AUB Logo" width="220">
+    </p>
+
+    <!-- Paragraph with link using the AUB logo -->
+    <p>
+      <a href="https://www.aub.edu.lb"
+         target="_blank"
+         title="American University of Beirut">
+        <img src="./aub-logo.png" alt="Visit AUB Website" width="220">
+      </a>
+    </p>
+
+    <div class="footer">
+      CMPS 302 – Computing Systems • HTML Project
+    </div>
+
+  </div>
 
 </body>
 </html>
