@@ -1,90 +1,59 @@
-CMPS 302 – HTML Project
-American University of Beirut Web Page
-Course Information
+# CMPS 302 – HTML Project  
+## American University of Beirut Web Page
 
-Course: CMPS 302 – Computing Systems
-Institution: American University of Beirut
-Project Type: Static Website (HTML, CSS, JavaScript)
+---
 
-Project Overview
+## Course Information
 
-This project is a professionally structured static website developed as part of the CMPS 302 HTML assignment. The purpose of the website is to present a concise introduction to the American University of Beirut (AUB) while demonstrating correct usage of HTML, CSS, and JavaScript according to modern web development best practices.
+| Item | Description |
+|-----|------------|
+| Course | CMPS 302 – Computing Systems |
+| Institution | American University of Beirut |
+| Project Type | Static Website |
+| Technologies | HTML5, CSS3, JavaScript |
 
-The project not only satisfies all stated assignment requirements but also extends beyond them by applying improved layout organization, external file structuring, and enhanced user interaction.
+---
 
-Implemented Requirements
+## Project Overview
 
-The following assignment requirements have been fully and correctly implemented:
+This repository contains a professionally structured static website developed as part of the **CMPS 302 HTML Project**.  
+The website presents a concise introduction to the **American University of Beirut (AUB)** while demonstrating correct and modern usage of HTML, CSS, and JavaScript.
 
-A paragraph element containing descriptive text about the American University of Beirut
+The implementation adheres strictly to assignment requirements and additionally applies best practices commonly used in real-world web development.
 
-An image related to AUB nested inside a paragraph element
+---
 
-A hyperlink to the official AUB website nested inside a paragraph element
+## Assignment Requirements Implementation
 
-The AUB logo is used as the clickable hyperlink
+The following requirements were fully implemented and verified:
 
-The hyperlink opens the official AUB website in a new browser tab
+- A paragraph element containing descriptive text about AUB  
+- An image related to AUB nested inside a paragraph element  
+- A hyperlink to the official AUB website nested inside a paragraph element  
+- The AUB logo is used as the clickable hyperlink  
+- Clicking the logo opens the AUB website in a new browser tab  
+- A tooltip displaying the full university name when hovering over “AUB”  
 
-A tooltip displaying the full university name when hovering over the abbreviation “AUB”
+All HTML elements follow correct semantic structure and nesting rules.
 
-All elements follow valid HTML semantics and proper nesting rules.
+---
 
-Additional Enhancements
+## Extended Features and Enhancements
 
-To improve the overall quality and professionalism of the website, several enhancements were added beyond the minimum requirements:
+Beyond the minimum requirements, the project includes the following enhancements:
 
-External CSS and JavaScript files to ensure separation of concerns
+- Separation of concerns through external CSS and JavaScript files  
+- Navigation bar for improved layout structure  
+- Card-based content sections for improved readability  
+- CSS transitions and hover effects for enhanced user experience  
+- Basic JavaScript interactions to demonstrate dynamic behavior  
+- Clean, scalable project organization suitable for GitHub Pages  
 
-A navigation bar to improve structure and readability
+No external frameworks or libraries were used.
 
-A card-based content layout highlighting key university areas
+---
 
-Smooth hover and transition effects implemented using CSS
+## Repository Structure
 
-Basic JavaScript interactivity to demonstrate dynamic behavior
+The project follows a clean and maintainable directory structure:
 
-A clean, responsive layout suitable for desktop viewing
-
-These enhancements were implemented without the use of external libraries or frameworks.
-
-File Structure
-
-The project follows a clear and organized directory structure suitable for GitHub Pages hosting:
-
-cmps302-html-project/
-│
-├── index.html
-├── css/
-│   └── style.css
-├── js/
-│   └── script.js
-├── images/
-│   └── aub_logo.jpeg
-└── README.md
-
-Technologies Used
-
-HTML5 for page structure and content
-
-CSS3 for layout, styling, and animations
-
-JavaScript for basic interactivity
-
-GitHub Pages for static website hosting
-
-How to Run the Project
-
-Clone or download the repository
-
-Open the index.html file in any modern web browser
-
-No additional dependencies or build steps are required.
-
-Design Rationale
-
-The website was designed with clarity, accessibility, and maintainability in mind. Externalizing CSS and JavaScript files follows standard web development practices and improves scalability. The visual design remains simple and professional while providing sufficient interactivity to enhance user experience.
-
-Conclusion
-
-This project demonstrates a solid understanding of fundamental web development concepts, proper HTML structure, and clean code organization. The implementation adheres to course requirements while showcasing additional effort and attention to detail.
