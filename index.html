@@ -7,78 +7,135 @@
   <style>
     body {
       font-family: "Segoe UI", Arial, sans-serif;
-      background-color: #f4f6f8;
+      background: linear-gradient(135deg, #f4f6f8, #e9ecef);
       margin: 0;
       padding: 40px;
     }
 
     .container {
-      max-width: 800px;
+      max-width: 850px;
       margin: auto;
       background: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      animation: fadeIn 1.2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
     }
 
     h1 {
       text-align: center;
       color: #8b0000;
+      margin-bottom: 20px;
     }
 
     p {
       font-size: 1.1em;
-      line-height: 1.6;
+      line-height: 1.7;
       text-align: center;
     }
 
-    img {
+    /* Tooltip target */
+    .aub-text {
+      font-weight: bold;
+      color: #8b0000;
+      cursor: help;
+    }
+
+    /* Clickable logo */
+    .logo-link {
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .logo-link img {
       display: block;
-      margin: 20px auto;
-      transition: transform 0.3s ease;
+      margin: 25px auto;
+      width: 220px;
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+      border-radius: 10px;
     }
 
-    img:hover {
-      transform: scale(1.05);
+    .logo-link:hover img {
+      transform: scale(1.08);
+      box-shadow: 0 0 25px rgba(139, 0, 0, 0.6);
     }
 
-    a {
-      text-decoration: none;
+    .logo-link:active img {
+      transform: scale(0.95);
+    }
+
+    /* Ripple effect */
+    .logo-link::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background: rgba(139, 0, 0, 0.25);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+    }
+
+    .logo-link:active::after {
+      width: 260px;
+      height: 260px;
+      opacity: 1;
+      transition: width 0.4s ease, height 0.4s ease, opacity 0.6s ease;
+    }
+
+    .hint {
+      font-size: 0.95em;
+      color: #666;
+      margin-top: -10px;
     }
 
     .footer {
-      margin-top: 30px;
+      margin-top: 40px;
       text-align: center;
       font-size: 0.9em;
-      color: #666;
+      color: #777;
     }
   </style>
 </head>
+
 <body>
 
   <div class="container">
 
     <h1>American University of Beirut</h1>
 
-    <!-- Paragraph with text about AUB and tooltip -->
+    <!-- Paragraph with tooltip -->
     <p>
-      <span title="American University of Beirut">AUB</span> is a leading private,
-      independent university located in Beirut, Lebanon, known for excellence in
-      education, research, and service.
+      <span class="aub-text" title="American University of Beirut">AUB</span> is a leading
+      private, independent university located in Beirut, Lebanon, known for excellence
+      in education, research, and service.
     </p>
 
-    <!-- Paragraph with image nested inside -->
+    <!-- Image nested inside a paragraph -->
     <p>
-      <img src="./aub_logo.jpeg" alt="AUB Logo" width="220">
+      <img src="./aub_logo.jpeg" alt="AUB Logo">
     </p>
 
-    <!-- Paragraph with link using the AUB logo -->
+    <!-- Clickable image link inside a paragraph -->
     <p>
-      <a href="https://www.aub.edu.lb"
+      <a class="logo-link"
+         href="https://www.aub.edu.lb"
          target="_blank"
-         title="American University of Beirut">
-        <img src="./aub_logo.jpeg" alt="Visit AUB Website" width="220">
+         title="Visit the American University of Beirut website">
+        <img src="./aub_logo.jpeg" alt="Visit AUB Website">
       </a>
+    </p>
+
+    <p class="hint">
+      Click the logo to open the AUB website in a new tab.
     </p>
 
     <div class="footer">
