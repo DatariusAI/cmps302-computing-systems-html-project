@@ -1,26 +1,13 @@
-// =========================
-// BASIC INTERACTIVITY SCRIPT
-// =========================
-
 document.addEventListener("DOMContentLoaded", () => {
-  const heroLink = document.querySelector(".hero-link");
-  const cards = document.querySelectorAll(".card");
+  const animatedBox = document.querySelector(".animated-box");
 
-  // Safety check
-  if (heroLink) {
-    heroLink.addEventListener("click", () => {
-      console.log("AUB logo clicked – opening official website.");
+  if (animatedBox) {
+    animatedBox.addEventListener("mouseenter", () => {
+      animatedBox.style.animationPlayState = "paused";
     });
 
-    heroLink.addEventListener("mouseenter", () => {
-      heroLink.title = "Click to visit the American University of Beirut website";
+    animatedBox.addEventListener("mouseleave", () => {
+      animatedBox.style.animationPlayState = "running";
     });
   }
-
-  // Card hover logging (demonstrates JS usage)
-  cards.forEach(card => {
-    card.addEventListener("mouseenter", () => {
-      card.style.cursor = "pointer";
-    });
-  });
 });
