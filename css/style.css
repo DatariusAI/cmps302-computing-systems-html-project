@@ -1,26 +1,20 @@
-/* =========================
-   GLOBAL STYLES
-   ========================= */
 body {
   font-family: "Segoe UI", Arial, sans-serif;
-  background: linear-gradient(135deg, #f4f6f8, #e9ecef);
+  background: #f4f6f8;
   margin: 0;
   padding: 0;
 }
 
-/* =========================
-   NAVIGATION BAR
-   ========================= */
 nav {
   background-color: #8b0000;
-  color: white;
   padding: 15px 30px;
+  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-nav .title {
+nav span {
   font-size: 1.2em;
   font-weight: bold;
 }
@@ -32,13 +26,6 @@ nav a {
   font-size: 0.95em;
 }
 
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* =========================
-   MAIN CONTAINER
-   ========================= */
 .container {
   max-width: 1000px;
   margin: 40px auto;
@@ -46,24 +33,11 @@ nav a:hover {
   padding: 40px;
   border-radius: 14px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-  animation: fadeIn 1s ease;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-h1 {
+h1, h2 {
   text-align: center;
   color: #8b0000;
-  margin-bottom: 15px;
 }
 
 p {
@@ -72,23 +46,16 @@ p {
   line-height: 1.7;
 }
 
-/* =========================
-   TOOLTIP TEXT
-   ========================= */
 .aub {
   font-weight: bold;
   color: #8b0000;
   cursor: help;
 }
 
-/* =========================
-   CLICKABLE HERO IMAGE
-   ========================= */
 .hero-link {
   display: block;
   width: fit-content;
   margin: 30px auto;
-  cursor: pointer;
 }
 
 .hero-link img {
@@ -102,13 +69,6 @@ p {
   box-shadow: 0 0 30px rgba(139, 0, 0, 0.6);
 }
 
-.hero-link:active img {
-  transform: scale(0.95);
-}
-
-/* =========================
-   INFORMATION CARDS
-   ========================= */
 .cards {
   display: flex;
   gap: 25px;
@@ -144,16 +104,32 @@ p {
   font-size: 0.9em;
 }
 
-.card a:hover {
-  background: #6f0000;
-}
-
-/* =========================
-   FOOTER
-   ========================= */
 footer {
   text-align: center;
   margin-top: 50px;
   font-size: 0.9em;
   color: #666;
+}
+
+/* Activity 1 animation requirements */
+
+@keyframes mymove {
+  from {
+    transform: rotate(-7deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animated-box {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  margin: 40px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  animation: mymove 1s infinite linear;
 }
