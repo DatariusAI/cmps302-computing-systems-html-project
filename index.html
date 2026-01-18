@@ -9,8 +9,8 @@
 <body>
 
   <nav>
-    <span>AUB HTML Project</span>
-    <div>
+    <span class="nav-title">AUB HTML Project</span>
+    <div class="nav-links">
       <a href="#">Home</a>
       <a href="#">Academics</a>
       <a href="#">Admissions</a>
@@ -18,28 +18,28 @@
     </div>
   </nav>
 
-  <div class="container">
+  <main class="container">
 
     <h1>American University of Beirut</h1>
 
-    <p>
+    <p class="intro">
       <span class="aub" title="American University of Beirut">AUB</span> is a leading private,
       independent university located in Beirut, Lebanon, known for excellence in
       education, research, and service.
     </p>
 
-    <p>
+    <div class="image-wrapper">
       <a class="hero-link"
          href="https://www.aub.edu.lb"
          target="_blank"
          title="Visit the American University of Beirut website">
-        <img src="./aub_logo.jpeg" alt="American University of Beirut Logo">
+        <img src="aub_logo.jpeg" alt="American University of Beirut Logo">
       </a>
-    </p>
+    </div>
 
-    <p><em>Click the image above to visit the official AUB website.</em></p>
+    <p class="hint">Click the image above to visit the official AUB website.</p>
 
-    <div class="cards">
+    <section class="cards">
       <div class="card">
         <h3>Academics</h3>
         <p>Explore undergraduate and graduate programs across multiple disciplines.</p>
@@ -57,18 +57,18 @@
         <p>Experience student organizations, athletics, and vibrant campus culture.</p>
         <a href="https://www.aub.edu.lb/campus-life" target="_blank">Discover</a>
       </div>
-    </div>
+    </section>
 
-    <!-- Activity 1 requirement -->
-    <h2>Activity 1 Animation</h2>
-
-    <div class="animated-box">hello</div>
+    <section class="activity">
+      <h2>Activity 1 Animation</h2>
+      <div class="animated-box">hello</div>
+    </section>
 
     <footer>
       CMPS 302 – Computing Systems • HTML Project
     </footer>
 
-  </div>
+  </main>
 
 </body>
 </html>
