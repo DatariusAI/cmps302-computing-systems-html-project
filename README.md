@@ -1,59 +1,33 @@
-# CMPS 302 – HTML Project  
-## American University of Beirut Web Page
+# CMPS 302 - HTML/CSS/JS Project
 
----
+![Course](https://img.shields.io/badge/CMPS_302-Computing_Systems-blue)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
 
-## Course Information
+A static website presenting the American University of Beirut (AUB), built as the final HTML project for CMPS 302. Demonstrates semantic HTML5, external CSS with transitions and hover effects, and basic JavaScript interactions.
 
-| Item | Description |
-|-----|------------|
-| Course | CMPS 302 – Computing Systems |
-| Institution | American University of Beirut |
-| Project Type | Static Website |
-| Technologies | HTML5, CSS3, JavaScript |
+## Features
 
----
+- AUB logo as a clickable link opening the official site in a new tab
+- Tooltip displaying the full university name on hover
+- Card-based content layout with CSS transitions
+- Navigation bar and responsive design
+- Separation of concerns (HTML / CSS / JS in dedicated files)
 
-## Project Overview
+## Project Structure
 
-This repository contains a professionally structured static website developed as part of the **CMPS 302 HTML Project**.  
-The website presents a concise introduction to the **American University of Beirut (AUB)** while demonstrating correct and modern usage of HTML, CSS, and JavaScript.
+```
+index.html          # Main page
+css/style.css       # Stylesheet
+js/script.js        # JavaScript interactions
+aub_logo.jpeg       # AUB logo image
+```
 
-The implementation adheres strictly to assignment requirements and additionally applies best practices commonly used in real-world web development.
+## How to Run
 
----
+Open `index.html` in any web browser.
 
-## Assignment Requirements Implementation
+## Course Info
 
-The following requirements were fully implemented and verified:
-
-- A paragraph element containing descriptive text about AUB  
-- An image related to AUB nested inside a paragraph element  
-- A hyperlink to the official AUB website nested inside a paragraph element  
-- The AUB logo is used as the clickable hyperlink  
-- Clicking the logo opens the AUB website in a new browser tab  
-- A tooltip displaying the full university name when hovering over “AUB”  
-
-All HTML elements follow correct semantic structure and nesting rules.
-
----
-
-## Extended Features and Enhancements
-
-Beyond the minimum requirements, the project includes the following enhancements:
-
-- Separation of concerns through external CSS and JavaScript files  
-- Navigation bar for improved layout structure  
-- Card-based content sections for improved readability  
-- CSS transitions and hover effects for enhanced user experience  
-- Basic JavaScript interactions to demonstrate dynamic behavior  
-- Clean, scalable project organization suitable for GitHub Pages  
-
-No external frameworks or libraries were used.
-
----
-
-## Repository Structure
-
-The project follows a clean and maintainable directory structure:
-
+**CMPS 302 - Computing Systems** | American University of Beirut
